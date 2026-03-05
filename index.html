@@ -6,74 +6,74 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Liderança Assessoria e Cobranças</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:linear-gradient(135deg,#020617,#0f172a,#020617);
+font-family:'Poppins',sans-serif;
+background:#0f172a;
 color:white;
-scroll-behavior:smooth;
 }
-
-img{
-max-width:100%;
-height:auto;
-}
-
-/* ===== MENU ===== */
 
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 60px;
-background:#020617;
-position:sticky;
+background:#0b1220;
+position:fixed;
+width:100%;
 top:0;
-z-index:10;
-box-shadow:0 5px 20px rgba(0,0,0,0.4);
+z-index:1000;
 }
 
 header h2{
 margin:0;
+font-weight:600;
 }
 
 .menu{
 display:flex;
-gap:25px;
+gap:30px;
 }
 
 .menu a{
 color:white;
 text-decoration:none;
-font-size:16px;
+font-size:15px;
+opacity:0.8;
 transition:0.3s;
 }
 
 .menu a:hover{
+opacity:1;
 color:#22c55e;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 
 .hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:100px 20px;
-}
-
-.logo{
-width:500px;
+padding:20px;
+background:linear-gradient(135deg,#0f172a,#020617);
 }
 
 .hero h1{
-font-size:42px;
-margin-top:20px;
+font-size:48px;
+max-width:800px;
 }
 
 .hero p{
 font-size:18px;
-opacity:0.9;
+opacity:0.8;
+max-width:600px;
 }
 
 .botao{
@@ -82,116 +82,74 @@ padding:16px 40px;
 border-radius:40px;
 text-decoration:none;
 color:white;
-font-size:18px;
-display:inline-block;
+font-weight:600;
 margin-top:30px;
+display:inline-block;
 transition:0.3s;
 }
 
 .botao:hover{
-transform:scale(1.05);
 background:#16a34a;
+transform:scale(1.05);
 }
 
-/* ===== SEÇÕES ===== */
+/* SEÇÕES */
 
 section{
-padding:80px 20px;
+padding:100px 20px;
 text-align:center;
 }
 
-.sobre{
-background:#020617;
+.container{
+max-width:1100px;
+margin:auto;
 }
-
-.sobre p{
-max-width:700px;
-margin:15px auto 0;
-}
-
-.stats{
-display:flex;
-justify-content:center;
-gap:60px;
-flex-wrap:wrap;
-margin-top:40px;
-}
-
-.stat{
-font-size:36px;
-font-weight:bold;
-color:#22c55e;
-}
-
-/* ===== SERVIÇOS ===== */
 
 .cards{
 display:flex;
-justify-content:center;
-gap:35px;
 flex-wrap:wrap;
-margin-top:40px;
+justify-content:center;
+gap:40px;
+margin-top:50px;
 }
 
 .card{
 background:#1e293b;
-padding:35px;
-width:260px;
-border-radius:14px;
+padding:40px;
+border-radius:20px;
+width:280px;
 transition:0.4s;
-box-shadow:0 0 20px rgba(0,0,0,0.4);
 }
 
 .card:hover{
 transform:translateY(-10px);
-box-shadow:0 20px 40px rgba(0,0,0,0.6);
+background:#243447;
 }
 
 .card h3{
 color:#22c55e;
 }
 
-/* ===== RODAPÉ ===== */
+.diferenciais{
+background:#111827;
+}
+
+.cta{
+background:linear-gradient(135deg,#22c55e,#16a34a);
+color:white;
+}
 
 footer{
-background:#020617;
+background:#0b1220;
 padding:40px;
 text-align:center;
 font-size:14px;
-opacity:0.8;
+opacity:0.7;
 }
 
-/* ===== WHATSAPP ===== */
+/* RESPONSIVO */
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25d366;
-width:65px;
-height:65px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
-animation:pulse 2s infinite;
-z-index:100;
-}
-
-.whatsapp img{
-width:34px;
-}
-
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.1);}
-100%{transform:scale(1);}
-}
-
-/* ===== RESPONSIVO ===== */
-
-@media (max-width:768px){
+@media(max-width:768px){
 
 header{
 flex-direction:column;
@@ -202,47 +160,19 @@ padding:15px;
 .menu{
 flex-wrap:wrap;
 justify-content:center;
-gap:15px;
-}
-
-.hero{
-padding:70px 15px;
 }
 
 .hero h1{
-font-size:28px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-.botao{
-font-size:16px;
-padding:14px 30px;
-}
-
-.stat{
-font-size:26px;
+font-size:30px;
 }
 
 .card{
 width:90%;
 }
 
-.whatsapp{
-width:55px;
-height:55px;
-}
-
-.whatsapp img{
-width:28px;
-}
-
 }
 
 </style>
-
 </head>
 
 <body>
@@ -258,69 +188,83 @@ width:28px;
 </header>
 
 <section class="hero">
-<img src="logo.png" class="logo">
-<h1>Liderança Assessoria e Cobranças</h1>
-<p>Especialistas em recuperação de crédito e negociação empresarial.</p>
-<a class="botao" href="https://wa.me/5511957969300?text=Olá,%20gostaria%20de%20falar%20com%20a%20Liderança%20Assessoria%20e%20Cobranças." target="_blank">
+<h1>Especialistas em Recuperação de Crédito Empresarial</h1>
+<p>Transformamos inadimplência em resultados reais através de estratégias modernas de negociação.</p>
+<a class="botao" href="https://wa.me/5511957969300" target="_blank">
 Falar com especialista
 </a>
 </section>
 
-<section id="sobre" class="sobre">
-<h2>Sobre nossa empresa</h2>
+<section id="sobre">
+<div class="container">
+<h2>Quem Somos</h2>
 <p>
-Atuamos na gestão de cobranças e recuperação de crédito para empresas em todo o Brasil, utilizando estratégias modernas de negociação e relacionamento com clientes.
+A Liderança Assessoria e Cobranças atua há mais de 10 anos oferecendo soluções inteligentes em cobrança empresarial e recuperação de crédito.
 </p>
-
-<div class="stats">
-<div>
-<div class="stat">+10 anos</div>
-<p>de experiência</p>
-</div>
-<div>
-<div class="stat">+5 mil</div>
-<p>negociações realizadas</p>
-</div>
-<div>
-<div class="stat">98%</div>
-<p>de satisfação</p>
-</div>
 </div>
 </section>
 
 <section id="servicos">
-<h2>Nossos Serviços</h2>
+<div class="container">
+<h2>Nossas Soluções</h2>
 <div class="cards">
+
 <div class="card">
 <h3>Cobrança Empresarial</h3>
-<p>Recuperação eficiente de crédito para empresas.</p>
+<p>Recuperação estratégica de valores em aberto com abordagem profissional.</p>
 </div>
+
 <div class="card">
 <h3>Negociação de Dívidas</h3>
-<p>Intermediação profissional entre empresas e clientes.</p>
+<p>Intermediação ética entre empresa e cliente para acordos eficazes.</p>
 </div>
+
 <div class="card">
 <h3>Gestão de Carteiras</h3>
-<p>Administração completa de carteiras de cobrança.</p>
+<p>Administração completa e acompanhamento de indicadores de cobrança.</p>
+</div>
+
 </div>
 </div>
 </section>
 
-<section id="contato" class="sobre">
-<h2>Entre em contato</h2>
-<p>Nossa equipe está pronta para atender sua empresa.</p>
-<a class="botao" href="https://wa.me/5511957969300?text=Olá,%20gostaria%20de%20falar%20com%20a%20Liderança%20Assessoria%20e%20Cobranças." target="_blank">
-Atendimento WhatsApp
+<section class="diferenciais">
+<div class="container">
+<h2>Por que escolher a Liderança?</h2>
+<div class="cards">
+
+<div class="card">
+<h3>Experiência</h3>
+<p>Mais de uma década atuando no mercado de recuperação de crédito.</p>
+</div>
+
+<div class="card">
+<h3>Alta Performance</h3>
+<p>Índice elevado de recuperação e satisfação de clientes.</p>
+</div>
+
+<div class="card">
+<h3>Atendimento Humanizado</h3>
+<p>Negociação ética preservando o relacionamento comercial.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="cta" id="contato">
+<div class="container">
+<h2>Precisa recuperar crédito da sua empresa?</h2>
+<p>Fale agora com um especialista e descubra a melhor estratégia.</p>
+<a class="botao" style="background:white;color:#16a34a;" href="https://wa.me/5511957969300" target="_blank">
+Atendimento via WhatsApp
 </a>
+</div>
 </section>
 
 <footer>
-<p>© 2026 Liderança Assessoria e Cobranças LTDA</p>
+© 2026 Liderança Assessoria e Cobranças LTDA
 </footer>
-
-<a class="whatsapp" href="https://wa.me/5511957969300?text=Olá,%20gostaria%20de%20falar%20com%20a%20Liderança%20Assessoria%20e%20Cobranças." target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-</a>
 
 </body>
 </html>
