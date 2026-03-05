@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Liderança Assessoria</title>
+<title>Liderança Assessoria e Cobranças</title>
 
 <style>
 
@@ -23,6 +24,8 @@ justify-content:space-between;
 align-items:center;
 padding:20px 60px;
 background:#020617;
+position:sticky;
+top:0;
 }
 
 .menu a{
@@ -36,11 +39,11 @@ font-size:16px;
 
 .hero{
 text-align:center;
-padding:80px 20px;
+padding:90px 20px;
 }
 
 .logo{
-width:420px;
+width:450px;
 max-width:90%;
 }
 
@@ -60,11 +63,33 @@ display:inline-block;
 margin-top:25px;
 }
 
+/* SOBRE */
+
+.sobre{
+padding:80px 20px;
+text-align:center;
+background:#020617;
+}
+
+/* ESTATISTICAS */
+
+.stats{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+}
+
+.stat{
+font-size:30px;
+font-weight:bold;
+}
+
 /* SERVIÇOS */
 
 .servicos{
-background:#020617;
-padding:70px 20px;
+padding:80px 20px;
 text-align:center;
 }
 
@@ -86,7 +111,8 @@ border-radius:12px;
 /* CONTATO */
 
 .contato{
-padding:70px 20px;
+background:#020617;
+padding:80px 20px;
 text-align:center;
 }
 
@@ -94,7 +120,7 @@ text-align:center;
 
 footer{
 background:#020617;
-padding:30px;
+padding:40px;
 text-align:center;
 font-size:14px;
 }
@@ -130,8 +156,9 @@ box-shadow:0 0 15px rgba(0,0,0,0.4);
 
 <div class="menu">
 <a href="#">Início</a>
-<a href="#">Serviços</a>
-<a href="#">Contato</a>
+<a href="#sobre">Sobre</a>
+<a href="#servicos">Serviços</a>
+<a href="#contato">Contato</a>
 </div>
 
 </header>
@@ -140,17 +167,44 @@ box-shadow:0 0 15px rgba(0,0,0,0.4);
 
 <img src="logo.png" class="logo">
 
-<h1>Liderança Assessoria</h1>
+<h1>Liderança Assessoria e Cobranças</h1>
 
-<p>Especialistas em cobrança e negociação</p>
+<p>Especialistas em recuperação de crédito e negociação empresarial.</p>
 
 <a class="botao" href="https://wa.me/SEUNUMERO">
-Falar no WhatsApp
+Falar com especialista
 </a>
 
 </section>
 
-<section class="servicos">
+<section id="sobre" class="sobre">
+
+<h2>Sobre nossa empresa</h2>
+
+<p>Atuamos na gestão de cobranças e recuperação de crédito para empresas em todo o Brasil, utilizando estratégias modernas de negociação e relacionamento com clientes.</p>
+
+<div class="stats">
+
+<div>
+<div class="stat">+10 anos</div>
+<p>de experiência</p>
+</div>
+
+<div>
+<div class="stat">+5 mil</div>
+<p>negociações realizadas</p>
+</div>
+
+<div>
+<div class="stat">98%</div>
+<p>de satisfação</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="servicos" class="servicos">
 
 <h2>Nossos Serviços</h2>
 
@@ -158,26 +212,28 @@ Falar no WhatsApp
 
 <div class="card">
 <h3>Cobrança Empresarial</h3>
-<p>Recuperação de crédito para empresas.</p>
+<p>Recuperação eficiente de crédito para empresas.</p>
 </div>
 
 <div class="card">
-<h3>Negociação</h3>
-<p>Acordos rápidos e profissionais.</p>
+<h3>Negociação de Dívidas</h3>
+<p>Intermediação profissional entre empresas e clientes.</p>
 </div>
 
 <div class="card">
-<h3>Consultoria</h3>
-<p>Estratégias para recuperação financeira.</p>
+<h3>Gestão de Carteiras</h3>
+<p>Administração completa de carteiras de cobrança.</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="contato">
+<section id="contato" class="contato">
 
-<h2>Fale Conosco</h2>
+<h2>Entre em contato</h2>
+
+<p>Nossa equipe está pronta para atender sua empresa.</p>
 
 <a class="botao" href="https://wa.me/SEUNUMERO">
 Atendimento WhatsApp
@@ -187,7 +243,7 @@ Atendimento WhatsApp
 
 <footer>
 
-<p>© 2026 Liderança Assessoria</p>
+<p>© 2026 Liderança Assessoria e Cobranças LTDA</p>
 
 </footer>
 
@@ -197,6 +253,7 @@ Atendimento WhatsApp
 
 </body>
 </html>
+
 
 
 
