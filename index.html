@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liderança Assessoria e Cobranças</title>
+
+<style>
+
+:root{
+--azul1:#0b1d3a;
+--azul2:#1e3a8a;
+--verde:#25D366;
+}
+
+/* RESET */
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+color:white;
+background:linear-gradient(120deg,var(--azul1),var(--azul2),var(--azul1));
+background-size:300% 300%;
+animation:bg 12s infinite alternate;
+}
+@keyframes bg{
+0%{background-position:left}
+100%{background-position:right}
+}
+
+/* MENU */
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo-topo{
+font-weight:bold;
+font-size:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:15px;
+opacity:0.9;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding-top:140px;
+padding-bottom:90px;
+max-width:900px;
+margin:auto;
+}
+
+.hero img{
+width:150px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.hero h1{
+font-size:42px;
+margin-top:25px;
+}
+
+.hero p{
+font-size:20px;
+opacity:0.9;
+}
+
+.botao{
+display:inline-block;
+margin-top:30px;
+padding:16px 35px;
+background:var(--verde);
+border-radius:40px;
+text-decoration:none;
+color:white;
+font-size:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.botao:hover{
+transform:scale(1.05);
+}
+
+/* SOBRE */
+
+.sobre{
+background:white;
+color:#333;
+padding:70px 20px;
+text-align:center;
+}
+
+.stats{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+}
+
+.stat{
+font-size:28px;
+font-weight:bold;
+}
+
+/* SERVIÇOS */
+
+.servicos{
+padding:80px 20px;
+text-align:center;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+padding:30px;
+width:260px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card h3{
+margin-top:10px;
+}
+
+/* CONTATO */
+
+.contato{
+background:white;
+color:#333;
+text-align:center;
+padding:70px 20px;
+}
+
+/* RODAPÉ */
+
+footer{
+background:#0b1d3a;
+text-align:center;
+padding:30px;
+font-size:14px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:65px;
+height:65px;
+background:var(--verde);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+color:white;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7)}
+70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+}
+
+/* RESPONSIVO */
+
+@media(max-width:700px){
+.hero h1{font-size:30px}
+nav{display:none}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo-topo">Liderança</div>
+
+<nav>
+<a href="#">Início</a>
+<a href="#sobre">Sobre</a>
+<a href="#servicos">Serviços</a>
+<a href="#contato">Contato</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<img src="logo.png">
+
+<h1>Liderança Assessoria e Cobranças LTDA</h1>
+
+<p>Especialistas em recuperação de crédito e gestão de cobranças.</p>
+
+<a class="botao" href="https://wa.me/5511957969300?text=Olá,%20quero%20falar%20com%20um%20especialista">
+Falar com especialista
+</a>
+
+</section>
+
+<section id="sobre" class="sobre">
+
+<h2>Sobre nossa empresa</h2>
+
+<p>Atuamos na recuperação de crédito e gestão de carteiras de cobrança com foco em resultados.</p>
+
+<div class="stats">
+
+<div>
+<div class="stat">+10 anos</div>
+<p>de experiência</p>
+</div>
+
+<div>
+<div class="stat">+5 mil</div>
+<p>negociações realizadas</p>
+</div>
+
+<div>
+<div class="stat">98%</div>
+<p>de satisfação</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="servicos" class="servicos">
+
+<h2>Nossos Serviços</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📊 Cobrança Empresarial</h3>
+<p>Recuperação eficiente de crédito para empresas.</p>
+</div>
+
+<div class="card">
+<h3>🤝 Negociação</h3>
+<p>Acordos rápidos e profissionais.</p>
+</div>
+
+<div class="card">
+<h3>💼 Gestão de Carteiras</h3>
+<p>Administração completa de dívidas.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contato" class="contato">
+
+<h2>Entre em contato</h2>
+
+<p>Nosso time está pronto para ajudar.</p>
+
+<a class="botao" href="https://wa.me/5511957969300?text=Olá,%20preciso%20de%20informações">
+Atendimento WhatsApp
+</a>
+
+</section>
+
+<footer>
+
+<p>© 2026 Liderança Assessoria e Cobranças LTDA</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5511957969300?text=Olá,%20quero%20atendimento">
+💬
+</a>
+
+</body>
+</html>
