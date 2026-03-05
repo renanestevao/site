@@ -14,6 +14,7 @@ margin:0;
 font-family:Arial, Helvetica, sans-serif;
 background:linear-gradient(135deg,#020617,#0f172a,#020617);
 color:white;
+scroll-behavior:smooth;
 }
 
 /* MENU */
@@ -28,6 +29,10 @@ position:sticky;
 top:0;
 z-index:10;
 box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+header h2{
+letter-spacing:1px;
 }
 
 .menu a{
@@ -46,7 +51,7 @@ color:#22c55e;
 
 .hero{
 text-align:center;
-padding:100px 20px;
+padding:110px 20px;
 }
 
 .logo{
@@ -95,16 +100,22 @@ text-align:center;
 background:#020617;
 }
 
+.sobre p{
+max-width:700px;
+margin:auto;
+margin-top:15px;
+}
+
 .stats{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:50px;
+gap:60px;
 margin-top:40px;
 }
 
 .stat{
-font-size:34px;
+font-size:36px;
 font-weight:bold;
 color:#22c55e;
 }
@@ -120,7 +131,7 @@ text-align:center;
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:30px;
+gap:35px;
 margin-top:40px;
 }
 
@@ -129,13 +140,17 @@ background:#1e293b;
 padding:35px;
 width:260px;
 border-radius:14px;
-transition:0.3s;
+transition:0.4s;
 box-shadow:0 0 20px rgba(0,0,0,0.4);
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 15px 40px rgba(0,0,0,0.6);
+transform:translateY(-12px);
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+
+.card h3{
+color:#22c55e;
 }
 
 /* CONTATO */
@@ -175,12 +190,12 @@ z-index:100;
 }
 
 .whatsapp img{
-width:36px;
+width:38px;
 }
 
 @keyframes pulse{
 0%{transform:scale(1);}
-50%{transform:scale(1.1);}
+50%{transform:scale(1.12);}
 100%{transform:scale(1);}
 }
 
@@ -295,6 +310,7 @@ Atendimento WhatsApp
 
 </body>
 </html>
+
 
 
 
