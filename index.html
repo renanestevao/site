@@ -3,127 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Liderança Assessoria e Cobranças</title>
+
+<title>Liderança Assessoria</title>
 
 <style>
 
-:root{
---azul1:#0b1d3a;
---azul2:#1e3a8a;
---verde:#25D366;
-}
-
-/* RESET */
-*{box-sizing:border-box}
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial;
+background:#0f172a;
 color:white;
-background:linear-gradient(120deg,var(--azul1),var(--azul2),var(--azul1));
-background-size:300% 300%;
-animation:bg 12s infinite alternate;
-}
-@keyframes bg{
-0%{background-position:left}
-100%{background-position:right}
 }
 
 /* MENU */
+
 header{
-position:fixed;
-top:0;
-width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 40px;
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
-z-index:1000;
+padding:20px 60px;
+background:#020617;
 }
 
-.logo-topo{
-font-weight:bold;
-font-size:20px;
-}
-
-nav a{
+.menu a{
 color:white;
 text-decoration:none;
-margin-left:20px;
-font-size:15px;
-opacity:0.9;
+margin-left:25px;
+font-size:16px;
 }
 
 /* HERO */
 
 .hero{
 text-align:center;
-padding-top:140px;
-padding-bottom:90px;
-max-width:900px;
-margin:auto;
+padding:80px 20px;
 }
 
-.hero img{
-width:150px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
+.logo{
+width:420px;
+max-width:90%;
 }
 
 .hero h1{
 font-size:42px;
-margin-top:25px;
-}
-
-.hero p{
-font-size:20px;
-opacity:0.9;
+margin-top:20px;
 }
 
 .botao{
-display:inline-block;
-margin-top:30px;
-padding:16px 35px;
-background:var(--verde);
+background:#22c55e;
+padding:15px 35px;
 border-radius:40px;
 text-decoration:none;
 color:white;
 font-size:18px;
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
-transition:0.3s;
-}
-
-.botao:hover{
-transform:scale(1.05);
-}
-
-/* SOBRE */
-
-.sobre{
-background:white;
-color:#333;
-padding:70px 20px;
-text-align:center;
-}
-
-.stats{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:40px;
-margin-top:40px;
-}
-
-.stat{
-font-size:28px;
-font-weight:bold;
+display:inline-block;
+margin-top:25px;
 }
 
 /* SERVIÇOS */
 
 .servicos{
-padding:80px 20px;
+background:#020617;
+padding:70px 20px;
 text-align:center;
 }
 
@@ -136,37 +77,25 @@ margin-top:40px;
 }
 
 .card{
-background:rgba(255,255,255,0.1);
-backdrop-filter:blur(10px);
+background:#1e293b;
 padding:30px;
 width:260px;
 border-radius:12px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-}
-
-.card h3{
-margin-top:10px;
 }
 
 /* CONTATO */
 
 .contato{
-background:white;
-color:#333;
-text-align:center;
 padding:70px 20px;
+text-align:center;
 }
 
 /* RODAPÉ */
 
 footer{
-background:#0b1d3a;
-text-align:center;
+background:#020617;
 padding:30px;
+text-align:center;
 font-size:14px;
 }
 
@@ -176,9 +105,9 @@ font-size:14px;
 position:fixed;
 bottom:25px;
 right:25px;
+background:#25d366;
 width:65px;
 height:65px;
-background:var(--verde);
 border-radius:50%;
 display:flex;
 align-items:center;
@@ -186,46 +115,88 @@ justify-content:center;
 font-size:30px;
 color:white;
 text-decoration:none;
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
-animation:pulse 2s infinite;
-}
-
-@keyframes pulse{
-0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7)}
-70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}
-100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
-}
-
-/* RESPONSIVO */
-
-@media(max-width:700px){
-.hero h1{font-size:30px}
-nav{display:none}
+box-shadow:0 0 15px rgba(0,0,0,0.4);
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
 
-<div class="logo-topo">Liderança</div>
+<h2>Liderança</h2>
 
-<nav>
+<div class="menu">
 <a href="#">Início</a>
-<a href="#sobre">Sobre</a>
-<a href="#servicos">Serviços</a>
-<a href="#contato">Contato</a>
-</nav>
+<a href="#">Serviços</a>
+<a href="#">Contato</a>
+</div>
 
 </header>
 
 <section class="hero">
 
-<img src="logo.png">
+<img src="logo.png" class="logo">
 
-<h1>Liderança Assessoria e Cobranças LTDA</h1>
+<h1>Liderança Assessoria</h1>
+
+<p>Especialistas em cobrança e negociação</p>
+
+<a class="botao" href="https://wa.me/SEUNUMERO">
+Falar no WhatsApp
+</a>
+
+</section>
+
+<section class="servicos">
+
+<h2>Nossos Serviços</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Cobrança Empresarial</h3>
+<p>Recuperação de crédito para empresas.</p>
+</div>
+
+<div class="card">
+<h3>Negociação</h3>
+<p>Acordos rápidos e profissionais.</p>
+</div>
+
+<div class="card">
+<h3>Consultoria</h3>
+<p>Estratégias para recuperação financeira.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="contato">
+
+<h2>Fale Conosco</h2>
+
+<a class="botao" href="https://wa.me/SEUNUMERO">
+Atendimento WhatsApp
+</a>
+
+</section>
+
+<footer>
+
+<p>© 2026 Liderança Assessoria</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/SEUNUMERO">
+💬
+</a>
+
+</body>
+</html>
 
 
 
