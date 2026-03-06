@@ -51,35 +51,24 @@ color:#22c55e;
 
 .hero{
 text-align:center;
-padding:110px 20px;
+padding:120px 20px;
 }
 
 .logo{
 width:520px;
 max-width:90%;
-animation:fade 1.5s ease;
-}
-
-@keyframes fade{
-0%{opacity:0; transform:scale(0.9);}
-100%{opacity:1; transform:scale(1);}
 }
 
 .hero h1{
-font-size:44px;
+font-size:46px;
 margin-top:20px;
 }
 
-.hero p{
-font-size:18px;
-opacity:0.9;
-}
+/* TEXTO DIGITANDO */
 
-/* FRASES QUE TROCAM */
-
-.frases{
+.typing{
 font-size:22px;
-margin-top:15px;
+margin-top:10px;
 color:#22c55e;
 font-weight:bold;
 height:30px;
@@ -95,7 +84,7 @@ text-decoration:none;
 color:white;
 font-size:18px;
 display:inline-block;
-margin-top:30px;
+margin-top:35px;
 transition:0.3s;
 }
 
@@ -107,7 +96,7 @@ background:#16a34a;
 /* SOBRE */
 
 .sobre{
-padding:90px 20px;
+padding:100px 20px;
 text-align:center;
 background:#020617;
 }
@@ -118,16 +107,18 @@ margin:auto;
 margin-top:15px;
 }
 
+/* CONTADORES */
+
 .stats{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:60px;
-margin-top:40px;
+margin-top:50px;
 }
 
-.stat{
-font-size:36px;
+.numero{
+font-size:40px;
 font-weight:bold;
 color:#22c55e;
 }
@@ -135,7 +126,7 @@ color:#22c55e;
 /* SERVIÇOS */
 
 .servicos{
-padding:90px 20px;
+padding:100px 20px;
 text-align:center;
 }
 
@@ -144,7 +135,7 @@ display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:35px;
-margin-top:40px;
+margin-top:50px;
 }
 
 .card{
@@ -169,7 +160,7 @@ color:#22c55e;
 
 .contato{
 background:#020617;
-padding:90px 20px;
+padding:100px 20px;
 text-align:center;
 }
 
@@ -183,7 +174,7 @@ font-size:14px;
 opacity:0.8;
 }
 
-/* WHATSAPP FLUTUANTE */
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -236,9 +227,7 @@ width:38px;
 
 <h1>Liderança Assessoria e Cobranças</h1>
 
-<div class="frases" id="frases"></div>
-
-<p>Especialistas em recuperação de crédito e negociação empresarial.</p>
+<div class="typing" id="typing"></div>
 
 <a class="botao" href="https://wa.me/5511957969300?text=Olá,%20gostaria%20de%20falar%20com%20a%20Liderança%20Assessoria%20e%20Cobranças." target="_blank">
 Falar com especialista
@@ -257,18 +246,18 @@ Atuamos na gestão de cobranças e recuperação de crédito para empresas em to
 <div class="stats">
 
 <div>
-<div class="stat">+10 anos</div>
-<p>de experiência</p>
+<div class="numero" data-target="10">0</div>
+<p>Anos de experiência</p>
 </div>
 
 <div>
-<div class="stat">+5 mil</div>
-<p>negociações realizadas</p>
+<div class="numero" data-target="5000">0</div>
+<p>Negociações realizadas</p>
 </div>
 
 <div>
-<div class="stat">98%</div>
-<p>de satisfação</p>
+<div class="numero" data-target="98">0</div>
+<p>% de satisfação</p>
 </div>
 
 </div>
@@ -306,7 +295,7 @@ Atuamos na gestão de cobranças e recuperação de crédito para empresas em to
 
 <p>Nossa equipe está pronta para atender sua empresa.</p>
 
-<a class="botao" href="https://wa.me/5511957969300?text=Olá,%20gostaria%20de%20falar%20com%20a%20Liderança%20Assessoria%20e%20Cobranças." target="_blank">
+<a class="botao" href="https://wa.me/5511957969300" target="_blank">
 Atendimento WhatsApp
 </a>
 
@@ -318,33 +307,98 @@ Atendimento WhatsApp
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/5511957969300?text=Olá,%20gostaria%20de%20falar%20com%20a%20Liderança%20Assessoria%20e%20Cobranças." target="_blank">
+<a class="whatsapp" href="https://wa.me/5511957969300" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
 
 <script>
 
-const frases = [
-"Recuperação de crédito empresarial",
+/* TEXTO DIGITANDO */
+
+const textos = [
+"Especialistas em recuperação de crédito",
 "Negociação profissional de dívidas",
-"Alta taxa de recuperação",
+"Alta taxa de recuperação financeira",
 "Mais de 10 anos de experiência",
-"Gestão completa de carteiras de cobrança"
+"Soluções completas em cobrança empresarial"
 ];
 
-let i = 0;
+let contadorTexto = 0;
+let contadorLetra = 0;
+let textoAtual = "";
+let apagando = false;
 
-function trocarFrase(){
-document.getElementById("frases").innerText = frases[i];
-i++;
-if(i >= frases.length){
-i = 0;
+function efeitoDigitando(){
+
+const elemento = document.getElementById("typing");
+
+if(!apagando && contadorLetra <= textos[contadorTexto].length){
+
+textoAtual = textos[contadorTexto].substring(0,contadorLetra++);
+elemento.innerHTML = textoAtual;
+
 }
+
+else if(apagando && contadorLetra >=0){
+
+textoAtual = textos[contadorTexto].substring(0,contadorLetra--);
+elemento.innerHTML = textoAtual;
+
 }
 
-setInterval(trocarFrase, 3000);
+if(contadorLetra == textos[contadorTexto].length){
 
-trocarFrase();
+apagando = true;
+setTimeout(efeitoDigitando,1500);
+return;
+
+}
+
+if(apagando && contadorLetra==0){
+
+apagando=false;
+contadorTexto++;
+if(contadorTexto==textos.length){contadorTexto=0;}
+
+}
+
+setTimeout(efeitoDigitando,80);
+
+}
+
+efeitoDigitando();
+
+/* CONTADOR DE NÚMEROS */
+
+const numeros = document.querySelectorAll(".numero");
+
+numeros.forEach(numero => {
+
+const atualizar = () => {
+
+const alvo = +numero.getAttribute("data-target");
+const atual = +numero.innerText;
+
+const incremento = alvo / 100;
+
+if(atual < alvo){
+
+numero.innerText = Math.ceil(atual + incremento);
+setTimeout(atualizar,20);
+
+}
+
+else{
+
+numero.innerText = alvo;
+
+}
+
+};
+
+atualizar();
+
+});
 
 </script>
 
