@@ -75,6 +75,18 @@ font-size:18px;
 opacity:0.9;
 }
 
+/* FRASES QUE TROCAM */
+
+.frases{
+font-size:22px;
+margin-top:15px;
+color:#22c55e;
+font-weight:bold;
+height:30px;
+}
+
+/* BOTÃO */
+
 .botao{
 background:#22c55e;
 padding:16px 40px;
@@ -224,6 +236,8 @@ width:38px;
 
 <h1>Liderança Assessoria e Cobranças</h1>
 
+<div class="frases" id="frases"></div>
+
 <p>Especialistas em recuperação de crédito e negociação empresarial.</p>
 
 <a class="botao" href="https://wa.me/5511957969300?text=Olá,%20gostaria%20de%20falar%20com%20a%20Liderança%20Assessoria%20e%20Cobranças." target="_blank">
@@ -308,7 +322,31 @@ Atendimento WhatsApp
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
 
+<script>
+
+const frases = [
+"Recuperação de crédito empresarial",
+"Negociação profissional de dívidas",
+"Alta taxa de recuperação",
+"Mais de 10 anos de experiência",
+"Gestão completa de carteiras de cobrança"
+];
+
+let i = 0;
+
+function trocarFrase(){
+document.getElementById("frases").innerText = frases[i];
+i++;
+if(i >= frases.length){
+i = 0;
+}
+}
+
+setInterval(trocarFrase, 3000);
+
+trocarFrase();
+
+</script>
+
 </body>
 </html>
-
-
