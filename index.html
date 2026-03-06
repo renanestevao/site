@@ -24,26 +24,19 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 40px;
+padding:20px 60px;
 background:#020617;
 position:sticky;
 top:0;
 z-index:10;
 box-shadow:0 5px 20px rgba(0,0,0,0.4);
-flex-wrap:wrap;
-}
-
-.menu{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
 }
 
 .menu a{
 color:white;
 text-decoration:none;
-margin:5px 12px;
-font-size:15px;
+margin-left:25px;
+font-size:16px;
 transition:0.3s;
 }
 
@@ -59,12 +52,12 @@ padding:110px 20px;
 }
 
 .logo{
-width:380px;
+width:420px;
 max-width:90%;
 }
 
 .hero h1{
-font-size:40px;
+font-size:42px;
 margin-top:20px;
 }
 
@@ -90,7 +83,7 @@ transform:scale(1.05);
 background:#16a34a;
 }
 
-/* FRASE PASSANDO */
+/* FRASES */
 
 .marquee{
 width:100%;
@@ -150,7 +143,6 @@ display:flex;
 gap:60px;
 margin-top:40px;
 animation:slide 20s linear infinite;
-width:max-content;
 }
 
 .slider img{
@@ -247,7 +239,25 @@ width:38px;
 
 header{
 flex-direction:column;
+align-items:center;
 text-align:center;
+padding:15px 10px;
+}
+
+header h2{
+margin-bottom:10px;
+}
+
+.menu{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.menu a{
+margin:0;
+font-size:15px;
 }
 
 .hero{
