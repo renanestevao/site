@@ -51,7 +51,7 @@ background:linear-gradient(135deg,#020617,#0f172a,#020617);
 }
 
 .logo{
-width:450px;
+width:420px;
 max-width:90%;
 }
 
@@ -97,7 +97,6 @@ justify-content:center;
 flex-wrap:wrap;
 gap:60px;
 padding:80px 20px;
-background:#020617;
 }
 
 .numero{
@@ -150,15 +149,21 @@ background:#0f172a;
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-gap:40px;
-margin-top:30px;
-opacity:0.7;
+gap:50px;
+margin-top:40px;
+align-items:center;
 }
 
 .logo-empresa{
-background:#1e293b;
-padding:20px 40px;
-border-radius:10px;
+height:50px;
+filter:brightness(0) invert(1);
+opacity:0.8;
+transition:0.3s;
+}
+
+.logo-empresa:hover{
+opacity:1;
+transform:scale(1.1);
 }
 
 /* DEPOIMENTOS */
@@ -279,17 +284,17 @@ Falar com especialista
 
 <div class="card">
 <h3>Cobrança Empresarial</h3>
-<p>Recuperação de crédito para empresas.</p>
+<p>Recuperação eficiente de crédito para empresas.</p>
 </div>
 
 <div class="card">
 <h3>Negociação de Dívidas</h3>
-<p>Intermediação entre empresa e cliente.</p>
+<p>Intermediação profissional entre empresas e clientes.</p>
 </div>
 
 <div class="card">
 <h3>Gestão de Carteiras</h3>
-<p>Administração de carteiras inadimplentes.</p>
+<p>Administração completa de carteiras de cobrança.</p>
 </div>
 
 </div>
@@ -302,10 +307,13 @@ Falar com especialista
 
 <div class="logos">
 
-<div class="logo-empresa">Empresa 1</div>
-<div class="logo-empresa">Empresa 2</div>
-<div class="logo-empresa">Empresa 3</div>
-<div class="logo-empresa">Empresa 4</div>
+<img class="logo-empresa" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Banco_Santander_Logotipo.svg">
+
+<img class="logo-empresa" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Digio_logo.png">
+
+<img class="logo-empresa" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Itau_logo_2023.svg">
+
+<img class="logo-empresa" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Bradesco_logo.svg">
 
 </div>
 
@@ -316,9 +324,7 @@ Falar com especialista
 <h2>Depoimentos</h2>
 
 <div class="depoimentos-container" id="depoimento">
-
 "Recuperamos mais de R$120 mil em inadimplência com a Liderança."
-
 </div>
 
 </section>
@@ -431,7 +437,7 @@ atualizar();
 
 });
 
-/* DEPOIMENTOS AUTOMÁTICOS */
+/* DEPOIMENTOS */
 
 const depoimentos = [
 
