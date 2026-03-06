@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 
 <meta charset="UTF-8">
@@ -23,19 +24,26 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 60px;
+padding:20px 40px;
 background:#020617;
 position:sticky;
 top:0;
 z-index:10;
 box-shadow:0 5px 20px rgba(0,0,0,0.4);
+flex-wrap:wrap;
+}
+
+.menu{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 .menu a{
 color:white;
 text-decoration:none;
-margin-left:25px;
-font-size:16px;
+margin:5px 12px;
+font-size:15px;
 transition:0.3s;
 }
 
@@ -51,12 +59,12 @@ padding:110px 20px;
 }
 
 .logo{
-width:420px;
+width:380px;
 max-width:90%;
 }
 
 .hero h1{
-font-size:42px;
+font-size:40px;
 margin-top:20px;
 }
 
@@ -95,11 +103,11 @@ margin-top:40px;
 .marquee span{
 display:inline-block;
 white-space:nowrap;
+padding-left:100%;
 animation:marquee 18s linear infinite;
 font-weight:bold;
 font-size:18px;
 color:#020617;
-padding-left:100%;
 }
 
 @keyframes marquee{
@@ -139,9 +147,9 @@ overflow:hidden;
 
 .slider{
 display:flex;
-gap:80px;
+gap:60px;
 margin-top:40px;
-animation:slide 25s linear infinite;
+animation:slide 20s linear infinite;
 width:max-content;
 }
 
@@ -233,6 +241,68 @@ width:38px;
 100%{transform:scale(1)}
 }
 
+/* RESPONSIVO CELULAR */
+
+@media (max-width:768px){
+
+header{
+flex-direction:column;
+text-align:center;
+}
+
+.hero{
+padding:70px 20px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.logo{
+width:260px;
+}
+
+.botao{
+padding:14px 30px;
+font-size:16px;
+}
+
+.stats{
+gap:30px;
+}
+
+.stat{
+font-size:26px;
+}
+
+.cards{
+flex-direction:column;
+align-items:center;
+}
+
+.card{
+width:90%;
+}
+
+.slider img{
+height:40px;
+}
+
+.whatsapp{
+width:60px;
+height:60px;
+}
+
+.whatsapp img{
+width:32px;
+}
+
+}
+
 </style>
 
 </head>
@@ -254,7 +324,7 @@ width:38px;
 
 <section class="hero">
 
-<img src="logo.png" class="logo" alt="Logo Liderança">
+<img src="logo.png" class="logo">
 
 <h1>Liderança Assessoria e Cobranças</h1>
 
@@ -307,10 +377,10 @@ Atuamos na gestão de cobranças e recuperação de crédito para empresas em to
 
 <div class="slider">
 
-<img src="santander.png" alt="Santander">
-<img src="digio.png" alt="Digio">
-<img src="itau.png" alt="Itau">
-<img src="bradesco.png" alt="Bradesco">
+<img src="santander.png">
+<img src="digio.png">
+<img src="itau.png">
+<img src="bradesco.png">
 
 <img src="santander.png">
 <img src="digio.png">
