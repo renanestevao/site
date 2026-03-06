@@ -12,7 +12,7 @@
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:linear-gradient(135deg,#020617,#0f172a,#020617);
+background:#020617;
 color:white;
 scroll-behavior:smooth;
 }
@@ -28,11 +28,7 @@ background:#020617;
 position:sticky;
 top:0;
 z-index:10;
-box-shadow:0 5px 20px rgba(0,0,0,0.4);
-}
-
-header h2{
-letter-spacing:1px;
+box-shadow:0 5px 20px rgba(0,0,0,0.5);
 }
 
 .menu a{
@@ -40,7 +36,6 @@ color:white;
 text-decoration:none;
 margin-left:25px;
 font-size:16px;
-transition:0.3s;
 }
 
 .menu a:hover{
@@ -52,26 +47,27 @@ color:#22c55e;
 .hero{
 text-align:center;
 padding:120px 20px;
+background:linear-gradient(135deg,#020617,#0f172a,#020617);
 }
 
 .logo{
-width:520px;
+width:450px;
 max-width:90%;
 }
 
 .hero h1{
-font-size:46px;
+font-size:48px;
 margin-top:20px;
 }
 
 /* TEXTO DIGITANDO */
 
 .typing{
-font-size:22px;
-margin-top:10px;
+font-size:24px;
 color:#22c55e;
 font-weight:bold;
-height:30px;
+height:35px;
+margin-top:10px;
 }
 
 /* BOTÃO */
@@ -89,32 +85,19 @@ transition:0.3s;
 }
 
 .botao:hover{
-transform:scale(1.05);
 background:#16a34a;
+transform:scale(1.05);
 }
 
-/* SOBRE */
+/* NÚMEROS */
 
-.sobre{
-padding:100px 20px;
-text-align:center;
-background:#020617;
-}
-
-.sobre p{
-max-width:700px;
-margin:auto;
-margin-top:15px;
-}
-
-/* CONTADORES */
-
-.stats{
+.numeros{
 display:flex;
-flex-wrap:wrap;
 justify-content:center;
+flex-wrap:wrap;
 gap:60px;
-margin-top:50px;
+padding:80px 20px;
+background:#020617;
 }
 
 .numero{
@@ -148,12 +131,49 @@ box-shadow:0 0 20px rgba(0,0,0,0.4);
 }
 
 .card:hover{
-transform:translateY(-12px);
-box-shadow:0 20px 40px rgba(0,0,0,0.6);
+transform:translateY(-10px);
 }
 
 .card h3{
 color:#22c55e;
+}
+
+/* EMPRESAS */
+
+.empresas{
+padding:80px 20px;
+text-align:center;
+background:#0f172a;
+}
+
+.logos{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:40px;
+margin-top:30px;
+opacity:0.7;
+}
+
+.logo-empresa{
+background:#1e293b;
+padding:20px 40px;
+border-radius:10px;
+}
+
+/* DEPOIMENTOS */
+
+.depoimentos{
+padding:90px 20px;
+text-align:center;
+}
+
+.depoimentos-container{
+max-width:700px;
+margin:auto;
+margin-top:40px;
+font-style:italic;
+font-size:18px;
 }
 
 /* CONTATO */
@@ -164,14 +184,13 @@ padding:100px 20px;
 text-align:center;
 }
 
-/* RODAPÉ */
+/* FOOTER */
 
 footer{
-background:#020617;
 padding:40px;
 text-align:center;
+background:#020617;
 font-size:14px;
-opacity:0.8;
 }
 
 /* WHATSAPP */
@@ -189,7 +208,6 @@ align-items:center;
 justify-content:center;
 box-shadow:0 0 20px rgba(0,0,0,0.5);
 animation:pulse 2s infinite;
-z-index:100;
 }
 
 .whatsapp img{
@@ -198,7 +216,7 @@ width:38px;
 
 @keyframes pulse{
 0%{transform:scale(1);}
-50%{transform:scale(1.12);}
+50%{transform:scale(1.1);}
 100%{transform:scale(1);}
 }
 
@@ -214,7 +232,6 @@ width:38px;
 
 <div class="menu">
 <a href="#">Início</a>
-<a href="#sobre">Sobre</a>
 <a href="#servicos">Serviços</a>
 <a href="#contato">Contato</a>
 </div>
@@ -229,21 +246,13 @@ width:38px;
 
 <div class="typing" id="typing"></div>
 
-<a class="botao" href="https://wa.me/5511957969300?text=Olá,%20gostaria%20de%20falar%20com%20a%20Liderança%20Assessoria%20e%20Cobranças." target="_blank">
+<a class="botao" href="https://wa.me/5511957969300" target="_blank">
 Falar com especialista
 </a>
 
 </section>
 
-<section id="sobre" class="sobre">
-
-<h2>Sobre nossa empresa</h2>
-
-<p>
-Atuamos na gestão de cobranças e recuperação de crédito para empresas em todo o Brasil, utilizando estratégias modernas de negociação e relacionamento com clientes.
-</p>
-
-<div class="stats">
+<section class="numeros">
 
 <div>
 <div class="numero" data-target="10">0</div>
@@ -260,8 +269,6 @@ Atuamos na gestão de cobranças e recuperação de crédito para empresas em to
 <p>% de satisfação</p>
 </div>
 
-</div>
-
 </section>
 
 <section id="servicos" class="servicos">
@@ -272,18 +279,45 @@ Atuamos na gestão de cobranças e recuperação de crédito para empresas em to
 
 <div class="card">
 <h3>Cobrança Empresarial</h3>
-<p>Recuperação eficiente de crédito para empresas.</p>
+<p>Recuperação de crédito para empresas.</p>
 </div>
 
 <div class="card">
 <h3>Negociação de Dívidas</h3>
-<p>Intermediação profissional entre empresas e clientes.</p>
+<p>Intermediação entre empresa e cliente.</p>
 </div>
 
 <div class="card">
 <h3>Gestão de Carteiras</h3>
-<p>Administração completa de carteiras de cobrança.</p>
+<p>Administração de carteiras inadimplentes.</p>
 </div>
+
+</div>
+
+</section>
+
+<section class="empresas">
+
+<h2>Empresas que confiam em nós</h2>
+
+<div class="logos">
+
+<div class="logo-empresa">Empresa 1</div>
+<div class="logo-empresa">Empresa 2</div>
+<div class="logo-empresa">Empresa 3</div>
+<div class="logo-empresa">Empresa 4</div>
+
+</div>
+
+</section>
+
+<section class="depoimentos">
+
+<h2>Depoimentos</h2>
+
+<div class="depoimentos-container" id="depoimento">
+
+"Recuperamos mais de R$120 mil em inadimplência com a Liderança."
 
 </div>
 
@@ -291,11 +325,9 @@ Atuamos na gestão de cobranças e recuperação de crédito para empresas em to
 
 <section id="contato" class="contato">
 
-<h2>Entre em contato</h2>
+<h2>Fale com nossa equipe</h2>
 
-<p>Nossa equipe está pronta para atender sua empresa.</p>
-
-<a class="botao" href="https://wa.me/5511957969300" target="_blank">
+<a class="botao" href="https://wa.me/5511957969300">
 Atendimento WhatsApp
 </a>
 
@@ -307,7 +339,7 @@ Atendimento WhatsApp
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/5511957969300" target="_blank">
+<a class="whatsapp" href="https://wa.me/5511957969300">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
 
@@ -317,10 +349,9 @@ Atendimento WhatsApp
 
 const textos = [
 "Especialistas em recuperação de crédito",
-"Negociação profissional de dívidas",
 "Alta taxa de recuperação financeira",
-"Mais de 10 anos de experiência",
-"Soluções completas em cobrança empresarial"
+"Negociação profissional de dívidas",
+"Mais de 10 anos de experiência"
 ];
 
 let contadorTexto = 0;
@@ -368,7 +399,7 @@ setTimeout(efeitoDigitando,80);
 
 efeitoDigitando();
 
-/* CONTADOR DE NÚMEROS */
+/* CONTADOR */
 
 const numeros = document.querySelectorAll(".numero");
 
@@ -399,6 +430,36 @@ numero.innerText = alvo;
 atualizar();
 
 });
+
+/* DEPOIMENTOS AUTOMÁTICOS */
+
+const depoimentos = [
+
+"Recuperamos mais de R$120 mil em inadimplência com a Liderança.",
+
+"A equipe conseguiu recuperar valores que achávamos perdidos.",
+
+"Profissionais sérios e com excelentes resultados."
+
+];
+
+let d = 0;
+
+function trocarDepoimento(){
+
+document.getElementById("depoimento").innerText = depoimentos[d];
+
+d++;
+
+if(d>=depoimentos.length){
+
+d=0;
+
+}
+
+}
+
+setInterval(trocarDepoimento,4000);
 
 </script>
 
