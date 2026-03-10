@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+[09:42, 10/03/2026] 😎: <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -17,27 +17,20 @@
 <meta name="robots" content="index, follow">
 
 <meta property="og:title" content="Liderança Assessoria e Cobranças">
-<meta property="og:description" content="Especialistas em recuperação de crédito e negociação empresarial.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="logo.png">
+<meta property="og:description" content="Especialistas em rec…
+[09:46, 10/03/2026] 😎: <!DOCTYPE html>
+<html lang="pt-br">
 
-<link rel="canonical" href="https://liderancaassessoria.com.br">
+<head>
 
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Organization",
- "name": "Liderança Assessoria e Cobranças",
- "url": "https://liderancaassessoria.com.br",
- "logo": "https://liderancaassessoria.com.br/logo.png",
- "contactPoint": {
- "@type": "ContactPoint",
- "telephone": "+55-11-95796-9300",
- "contactType": "customer service",
- "areaServed": "BR"
- }
-}
-</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Liderança Assessoria e Cobranças</title>
+
+<meta name="description" content="Especialistas em recuperação de crédito e cobrança empresarial.">
+
+<link rel="icon" type="image/png" href="/favicon.png">
 
 <style>
 
@@ -46,27 +39,36 @@ margin:0;
 font-family:Arial, Helvetica, sans-serif;
 background:linear-gradient(135deg,#020617,#0f172a,#020617);
 color:white;
-scroll-behavior:smooth;
 }
 
-/* MENU */
+/* HEADER */
 
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 60px;
+padding:18px 40px;
 background:#020617;
 position:sticky;
 top:0;
-z-index:10;
+z-index:1000;
 box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+.logo-topo{
+height:40px;
+}
+
+/* MENU */
+
+.menu{
+display:flex;
+gap:25px;
 }
 
 .menu a{
 color:white;
 text-decoration:none;
-margin-left:25px;
 font-size:16px;
 transition:0.3s;
 }
@@ -75,11 +77,19 @@ transition:0.3s;
 color:#22c55e;
 }
 
+/* MENU HAMBURGUER */
+
+.hamburger{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
 /* HERO */
 
 .hero{
 text-align:center;
-padding:110px 20px;
+padding:100px 20px;
 }
 
 .logo{
@@ -114,31 +124,6 @@ transform:scale(1.05);
 background:#16a34a;
 }
 
-/* FRASES */
-
-.marquee{
-width:100%;
-overflow:hidden;
-background:#22c55e;
-padding:12px 0;
-margin-top:40px;
-}
-
-.marquee span{
-display:inline-block;
-white-space:nowrap;
-padding-left:100%;
-animation:marquee 18s linear infinite;
-font-weight:bold;
-font-size:18px;
-color:#020617;
-}
-
-@keyframes marquee{
-0%{transform:translateX(0)}
-100%{transform:translateX(-100%)}
-}
-
 /* SOBRE */
 
 .sobre{
@@ -160,33 +145,7 @@ font-weight:bold;
 color:#22c55e;
 }
 
-/* EMPRESAS */
-
-.empresas{
-padding:80px 20px;
-text-align:center;
-background:#020617;
-overflow:hidden;
-}
-
-.slider{
-display:flex;
-gap:60px;
-margin-top:40px;
-animation:slide 20s linear infinite;
-}
-
-.slider img{
-height:60px;
-opacity:0.9;
-}
-
-@keyframes slide{
-0%{transform:translateX(0)}
-100%{transform:translateX(-50%)}
-}
-
-/* SERVIÇOS */
+/* SERVICOS */
 
 .servicos{
 padding:90px 20px;
@@ -222,9 +181,9 @@ color:#22c55e;
 /* CONTATO */
 
 .contato{
-background:#020617;
 padding:90px 20px;
 text-align:center;
+background:#020617;
 }
 
 /* FOOTER */
@@ -244,24 +203,55 @@ position:fixed;
 bottom:25px;
 right:25px;
 background:#25d366;
-width:70px;
-height:70px;
+width:65px;
+height:65px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
 box-shadow:0 0 20px rgba(0,0,0,0.5);
-animation:pulse 2s infinite;
 }
 
 .whatsapp img{
-width:38px;
+width:36px;
 }
 
-@keyframes pulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.12)}
-100%{transform:scale(1)}
+/* RESPONSIVO */
+
+@media (max-width:768px){
+
+.menu{
+display:none;
+flex-direction:column;
+position:absolute;
+top:70px;
+right:0;
+background:#020617;
+width:220px;
+padding:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.menu a{
+padding:10px 0;
+}
+
+.menu.active{
+display:flex;
+}
+
+.hamburger{
+display:block;
+}
+
+header{
+padding:15px 20px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
 }
 
 </style>
@@ -272,34 +262,34 @@ width:38px;
 
 <header>
 
-<h2>Liderança</h2>
+<img src="logo.png" class="logo-topo">
 
-<div class="menu">
+<div class="hamburger" onclick="toggleMenu()">
+☰
+</div>
+
+<nav class="menu" id="menu">
+
 <a href="#">Início</a>
 <a href="#sobre">Sobre</a>
 <a href="#servicos">Serviços</a>
 <a href="#contato">Contato</a>
-</div>
+
+</nav>
 
 </header>
 
 <section class="hero">
 
-<img src="logo.png" class="logo" alt="Logo Liderança Assessoria e Cobranças">
+<img src="logo.png" class="logo">
 
 <h1>Liderança Assessoria e Cobranças</h1>
 
 <p>Especialistas em recuperação de crédito e negociação empresarial.</p>
 
-<a class="botao" href="https://wa.me/5511957969300?text=Olá%20gostaria%20de%20falar%20com%20um%20especialista" target="_blank">
+<a class="botao" href="https://wa.me/5511957969300?text=Olá%20gostaria%20de%20informações" target="_blank">
 Falar com especialista
 </a>
-
-<div class="marquee">
-<span>
-Recuperação de crédito empresarial • Negociação estratégica • Redução da inadimplência • Gestão de carteiras • Atendimento em todo Brasil
-</span>
-</div>
 
 </section>
 
@@ -307,9 +297,7 @@ Recuperação de crédito empresarial • Negociação estratégica • Reduçã
 
 <h2>Sobre nossa empresa</h2>
 
-<p>
-Atuamos na gestão de cobranças e recuperação de crédito para empresas em todo o Brasil.
-</p>
+<p>Atuamos na gestão de cobranças e recuperação de crédito para empresas em todo o Brasil.</p>
 
 <div class="stats">
 
@@ -320,33 +308,13 @@ Atuamos na gestão de cobranças e recuperação de crédito para empresas em to
 
 <div>
 <div class="stat">+5 mil</div>
-<p>negociações realizadas</p>
+<p>negociações</p>
 </div>
 
 <div>
 <div class="stat">98%</div>
 <p>de satisfação</p>
 </div>
-
-</div>
-
-</section>
-
-<section class="empresas">
-
-<h2>Empresas que confiam em nós</h2>
-
-<div class="slider">
-
-<img src="santander.png" alt="Santander">
-<img src="digio.png" alt="Digio">
-<img src="itau.png" alt="Itau">
-<img src="bradesco.png" alt="Bradesco">
-
-<img src="santander.png" alt="Santander">
-<img src="digio.png" alt="Digio">
-<img src="itau.png" alt="Itau">
-<img src="bradesco.png" alt="Bradesco">
 
 </div>
 
@@ -360,17 +328,17 @@ Atuamos na gestão de cobranças e recuperação de crédito para empresas em to
 
 <div class="card">
 <h3>Cobrança Empresarial</h3>
-<p>Recuperação eficiente de crédito para empresas.</p>
+<p>Recuperação eficiente de crédito.</p>
 </div>
 
 <div class="card">
 <h3>Negociação de Dívidas</h3>
-<p>Intermediação profissional entre empresas e clientes.</p>
+<p>Intermediação profissional.</p>
 </div>
 
 <div class="card">
 <h3>Gestão de Carteiras</h3>
-<p>Administração completa de carteiras de cobrança.</p>
+<p>Administração de carteiras.</p>
 </div>
 
 </div>
@@ -383,7 +351,7 @@ Atuamos na gestão de cobranças e recuperação de crédito para empresas em to
 
 <p>Nossa equipe está pronta para atender sua empresa.</p>
 
-<a class="botao" href="https://wa.me/5511957969300?text=Olá%20preciso%20de%20informações%20sobre%20cobrança%20empresarial" target="_blank">
+<a class="botao" href="https://wa.me/5511957969300?text=Olá%20preciso%20de%20informações" target="_blank">
 Atendimento WhatsApp
 </a>
 
@@ -391,13 +359,21 @@ Atendimento WhatsApp
 
 <footer>
 
-<p>© 2026 Liderança Assessoria e Cobranças LTDA</p>
+<p>© 2026 Liderança Assessoria e Cobranças</p>
 
 </footer>
 
 <a class="whatsapp" href="https://wa.me/5511957969300?text=Olá%20vim%20pelo%20site" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
+
+<script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+</script>
 
 </body>
 </html>
